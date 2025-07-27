@@ -129,8 +129,18 @@ class Game {
     }
     
     loadLevel(levelNumber) {
+        console.log(`📦 LEVEL ${levelNumber} YÜKLENİYOR...`);
+        
         // Level verilerini yükle
         const levelData = LevelManager.getLevel(levelNumber);
+        
+        if (!levelData) {
+            console.log(`❌ LEVEL ${levelNumber} BULUNAMADI!`);
+            this.gameOver();
+            return;
+        }
+        
+        console.log(`✅ Level ${levelNumber} verisi bulundu:`, levelData.name);
         
         // Oyuncu oluştur
         this.player = new Player(levelData.playerStart.x, levelData.playerStart.y);
@@ -146,6 +156,8 @@ class Game {
         // Kamera sıfırla
         this.camera.x = 0;
         this.camera.y = 0;
+        
+        console.log(`🎮 Level ${levelNumber} başarıyla yüklendi!`);
     }
     
     gameLoop(currentTime) {
