@@ -105,7 +105,7 @@ class LevelManager {
             description: "Yunus sosyal medyada Hale'yi buldu ama... Utangaçlık kazandı, istek atamadı.",
             theme: "social_fear",
             playerStart: { x: 50, y: 400 },
-            goal: { x: 1700, y: 100 },
+            goal: { x: 1650, y: 380 },
             platforms: [
                 // Romantik bahçe zemini
                 { x: 0, y: 450, width: 300, height: 50, type: 'grass' },
@@ -115,27 +115,19 @@ class LevelManager {
                 { x: 1150, y: 450, width: 300, height: 50, type: 'grass' },
                 { x: 1500, y: 450, width: 250, height: 50, type: 'grass' },
                 
-                // Kalp şeklinde platformlar
-                { x: 200, y: 380, width: 60, height: 15, type: 'cloud' },
-                { x: 280, y: 380, width: 60, height: 15, type: 'cloud' },
-                { x: 240, y: 350, width: 40, height: 15, type: 'cloud' },
+                // Sosyal medya platformları (korku temalı)
+                { x: 200, y: 400, width: 80, height: 20, type: 'stone' },
+                { x: 350, y: 380, width: 80, height: 20, type: 'stone' },
+                { x: 500, y: 360, width: 80, height: 20, type: 'stone' },
+                { x: 650, y: 380, width: 80, height: 20, type: 'stone' },
+                { x: 800, y: 360, width: 80, height: 20, type: 'stone' },
+                { x: 950, y: 380, width: 80, height: 20, type: 'stone' },
+                { x: 1100, y: 400, width: 80, height: 20, type: 'stone' },
+                { x: 1250, y: 380, width: 80, height: 20, type: 'stone' },
+                { x: 1400, y: 400, width: 80, height: 20, type: 'stone' },
                 
-                { x: 500, y: 350, width: 60, height: 15, type: 'cloud' },
-                { x: 580, y: 350, width: 60, height: 15, type: 'cloud' },
-                { x: 540, y: 320, width: 40, height: 15, type: 'cloud' },
-                
-                { x: 800, y: 320, width: 60, height: 15, type: 'cloud' },
-                { x: 880, y: 320, width: 60, height: 15, type: 'cloud' },
-                { x: 840, y: 290, width: 40, height: 15, type: 'cloud' },
-                
-                // Çiçek platformları
-                { x: 1000, y: 350, width: 80, height: 20, type: 'grass' },
-                { x: 1200, y: 300, width: 80, height: 20, type: 'grass' },
-                { x: 1400, y: 250, width: 80, height: 20, type: 'grass' },
-                { x: 1600, y: 200, width: 80, height: 20, type: 'grass' },
-                
-                // Final platform (altar)
-                { x: 1650, y: 100, width: 150, height: 30, type: 'cloud' },
+                // Hale'nin bulunduğu platform (utangaçlık yüzünden erişilemeyen)
+                { x: 1600, y: 380, width: 120, height: 20, type: 'stone' },
             ],
             enemies: [
                 // Daha az düşman, daha çok aşk temalı
