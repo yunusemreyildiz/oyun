@@ -52,7 +52,7 @@ class LevelManager {
             description: "Yunus arkadaşlarına soruyor: 'O kız kim?' Sonunda bir arkadaşı tanıyor ve adını öğreniyor...",
             theme: "school_corridor",
             playerStart: { x: 50, y: 400 },
-            goal: { x: 1850, y: 350 },
+            goal: { x: 1870, y: 330 },
             platforms: [
                 // Ana zemin - okul koridoru
                 { x: 0, y: 450, width: 300, height: 50, type: 'stone' },
@@ -73,9 +73,10 @@ class LevelManager {
                 { x: 1400, y: 380, width: 100, height: 20, type: 'stone' },
                 { x: 1600, y: 350, width: 100, height: 20, type: 'stone' },
                 
-                // Hale'ye ulaşım platformları
-                { x: 1750, y: 400, width: 50, height: 20, type: 'stone' },
-                { x: 1820, y: 350, width: 100, height: 30, type: 'stone' }, // Hale'nin bulunduğu platform
+                // Hale'ye ulaşım platformları (basamaklı çıkış)
+                { x: 1650, y: 400, width: 80, height: 20, type: 'stone' },
+                { x: 1750, y: 380, width: 80, height: 20, type: 'stone' },
+                { x: 1850, y: 360, width: 100, height: 20, type: 'stone' }, // Hale'nin bulunduğu platform
             ],
             enemies: [
                 { x: 200, y: 420, type: 'troll' },
