@@ -104,7 +104,7 @@ class LevelManager {
             name: "Utangaçlığın Zaferi",
             description: "Yunus sosyal medyada Hale'yi buldu ama... Utangaçlık kazandı, istek atamadı.",
             theme: "social_fear",
-            playerStart: { x: 50, y: 400 },
+            playerStart: { x: 50, y: 420 },
             goal: { x: 1650, y: 380 },
             platforms: [
                 // Romantik bahçe zemini
