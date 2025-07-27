@@ -235,8 +235,10 @@ class Game {
     playerTakeDamage() {
         this.lives--;
         this.audio.playSound('damage');
+        console.log(`💔 HASAR ALDIN! Kalan can: ${this.lives}`);
         
         if (this.lives <= 0) {
+            console.log(`☠️ TÜM CANLAR BİTTİ! OYUN BİTİYOR!`);
             this.gameOver();
         } else {
             // Oyuncuyu başlangıç pozisyonuna geri götür
