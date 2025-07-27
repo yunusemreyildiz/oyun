@@ -52,31 +52,30 @@ class LevelManager {
             description: "Yunus arkadaşlarına soruyor: 'O kız kim?' Sonunda bir arkadaşı tanıyor ve adını öğreniyor...",
             theme: "school_corridor",
             playerStart: { x: 50, y: 400 },
-            goal: { x: 1900, y: 200 },
+            goal: { x: 1850, y: 350 },
             platforms: [
-                // Ana zemin
-                { x: 0, y: 450, width: 200, height: 50, type: 'grass' },
-                { x: 250, y: 450, width: 150, height: 50, type: 'cloud' },
-                { x: 450, y: 450, width: 200, height: 50, type: 'grass' },
-                { x: 700, y: 450, width: 150, height: 50, type: 'cloud' },
-                { x: 900, y: 450, width: 200, height: 50, type: 'grass' },
+                // Ana zemin - okul koridoru
+                { x: 0, y: 450, width: 300, height: 50, type: 'stone' },
+                { x: 350, y: 450, width: 200, height: 50, type: 'stone' },
+                { x: 600, y: 450, width: 250, height: 50, type: 'stone' },
+                { x: 900, y: 450, width: 200, height: 50, type: 'stone' },
+                { x: 1150, y: 450, width: 250, height: 50, type: 'stone' },
+                { x: 1450, y: 450, width: 200, height: 50, type: 'stone' },
+                { x: 1700, y: 450, width: 300, height: 50, type: 'stone' },
                 
-                // Bulut platformları (sosyal medya posts)
-                { x: 150, y: 350, width: 80, height: 20, type: 'cloud' },
-                { x: 300, y: 300, width: 80, height: 20, type: 'cloud' },
-                { x: 500, y: 250, width: 80, height: 20, type: 'cloud' },
-                { x: 650, y: 200, width: 80, height: 20, type: 'cloud' },
-                { x: 800, y: 150, width: 80, height: 20, type: 'cloud' },
-                { x: 950, y: 200, width: 80, height: 20, type: 'cloud' },
-                { x: 1100, y: 250, width: 80, height: 20, type: 'cloud' },
-                { x: 1250, y: 200, width: 80, height: 20, type: 'cloud' },
-                { x: 1400, y: 150, width: 80, height: 20, type: 'cloud' },
-                { x: 1550, y: 200, width: 80, height: 20, type: 'cloud' },
-                { x: 1700, y: 250, width: 80, height: 20, type: 'cloud' },
-                { x: 1850, y: 300, width: 100, height: 20, type: 'cloud' },
+                // Ara platformlar (öğrenci masaları/sıralar)
+                { x: 200, y: 380, width: 100, height: 20, type: 'stone' },
+                { x: 400, y: 350, width: 100, height: 20, type: 'stone' },
+                { x: 650, y: 380, width: 100, height: 20, type: 'stone' },
+                { x: 850, y: 350, width: 100, height: 20, type: 'stone' },
+                { x: 1000, y: 380, width: 100, height: 20, type: 'stone' },
+                { x: 1200, y: 350, width: 100, height: 20, type: 'stone' },
+                { x: 1400, y: 380, width: 100, height: 20, type: 'stone' },
+                { x: 1600, y: 350, width: 100, height: 20, type: 'stone' },
                 
-                // Yüksek platform (Hale'nin profili)
-                { x: 1800, y: 200, width: 200, height: 30, type: 'cloud' },
+                // Hale'ye ulaşım platformları
+                { x: 1750, y: 400, width: 50, height: 20, type: 'stone' },
+                { x: 1820, y: 350, width: 100, height: 30, type: 'stone' }, // Hale'nin bulunduğu platform
             ],
             enemies: [
                 { x: 200, y: 420, type: 'troll' },
