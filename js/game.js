@@ -252,9 +252,13 @@ class Game {
         this.audio.playLoveSound(); // Romantik ses ekle
         this.score += 1000;
         
+        console.log(`Level ${this.currentLevel} tamamlandı! Max level: ${this.maxLevel}`);
+        
         if (this.currentLevel >= this.maxLevel) {
+            console.log('Oyun tamamlandı!');
             this.gameComplete();
         } else {
+            console.log(`Sonraki level: ${this.currentLevel + 1}`);
             // Level geçiş animasyonu göster
             this.showLevelTransition(() => {
                 this.currentLevel++;
