@@ -1,0 +1,20 @@
+# IDE dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Geçici dosyalar
+*.tmp
+*.temp
+
+# Node modules (eğer gelecekte npm kullanılırsa)
+node_modules/
+
+# Backup dosyaları
+*.bak
+*.backup 

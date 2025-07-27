@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Manuel olarak workflow'u çalıştırma izni
+  workflow_dispatch:
+
+# GitHub token'ın Pages'e yazmak için gereken izinleri
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Eşzamanlı deployment'ları iptal et
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Basit deployment job - HTML/CSS/JS dosyaları static olduğu için build'e gerek yok
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Repository root'unu upload et
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 
