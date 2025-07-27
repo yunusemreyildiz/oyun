@@ -7,7 +7,7 @@ class Game {
         this.score = 0;
         this.lives = 3;
         this.currentLevel = 1;
-        this.maxLevel = 3;
+        this.maxLevel = 13;
         
         // Oyun nesneleri
         this.player = null;
@@ -217,6 +217,9 @@ class Game {
         if (this.goal && this.player.checkCollision(this.goal)) {
             this.completeLevel();
         }
+        
+        // Özel level mekanikleri
+        this.checkLevelSpecificMechanics();
     }
     
     checkGameState() {
@@ -287,6 +290,48 @@ class Game {
         };
         
         requestAnimationFrame(transitionAnimation);
+    }
+    
+    checkLevelSpecificMechanics() {
+        // Level 8: Hacker seviyesi - özel efektler
+        if (this.currentLevel === 8) {
+            // Matrix efekti
+            this.addMatrixEffect();
+        }
+        
+        // Level 11: Çıldırma seviyesi - ekran sarsıntısı
+        if (this.currentLevel === 11) {
+            this.addScreenShake();
+        }
+        
+        // Level 13: Trabzon seviyesi - uçak efekti
+        if (this.currentLevel === 13) {
+            this.addPlaneEffect();
+        }
+    }
+    
+    addMatrixEffect() {
+        // Basit matrix efekti - yeşil parçacıklar
+        if (Math.random() < 0.1) {
+            for (let i = 0; i < 5; i++) {
+                const x = Math.random() * this.canvas.width + this.camera.x;
+                const y = this.camera.y - 10;
+                // Matrix karakterleri efekti burada olacak
+            }
+        }
+    }
+    
+    addScreenShake() {
+        // Ekran sarsıntısı efekti
+        if (this.enemies.length > 0) {
+            this.camera.x += (Math.random() - 0.5) * 4;
+            this.camera.y += (Math.random() - 0.5) * 4;
+        }
+    }
+    
+    addPlaneEffect() {
+        // Uçak ve bulut efektleri
+        // Bu level'de ek görsel efektler
     }
     
     gameOver() {
