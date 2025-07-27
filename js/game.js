@@ -228,6 +228,7 @@ class Game {
     checkGameState() {
         // Oyuncu düştü mü?
         if (this.player.y > 1200) {
+            console.log(`💀 DÜŞTÜN! Y pozisyonu: ${this.player.y}`);
             this.playerTakeDamage();
         }
     }
