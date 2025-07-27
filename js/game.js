@@ -257,6 +257,7 @@ class Game {
         
         console.log(`🏆 LEVEL ${this.currentLevel} TAMAMLANDI! Max level: ${this.maxLevel}`);
         console.log(`🎯 Şu anki seviye: ${this.currentLevel}, Max seviye: ${this.maxLevel}`);
+        console.log(`🔍 KONTROL: ${this.currentLevel} >= ${this.maxLevel} = ${this.currentLevel >= this.maxLevel}`);
         
         if (this.currentLevel >= this.maxLevel) {
             console.log('Oyun tamamlandı!');
