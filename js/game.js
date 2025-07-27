@@ -8,6 +8,7 @@ class Game {
         this.lives = 3;
         this.currentLevel = 1;
         this.maxLevel = 13;
+        console.log('Oyun başlatıldı! maxLevel:', this.maxLevel);
         
         // Oyun nesneleri
         this.player = null;
