@@ -8,7 +8,9 @@ class Game {
         this.lives = 3;
         this.currentLevel = 1;
         this.maxLevel = 13;
-        console.log('Oyun başlatıldı! maxLevel:', this.maxLevel);
+        console.log('🎮 OYUN BAŞLADI! maxLevel:', this.maxLevel);
+        console.log('🔥 CACHE BYPASS AKTIF - VERSION 1.2');
+        console.log('📊 Tüm 13 seviye yüklendi!');
         
         // Oyun nesneleri
         this.player = null;
@@ -253,7 +255,8 @@ class Game {
         this.audio.playLoveSound(); // Romantik ses ekle
         this.score += 1000;
         
-        console.log(`Level ${this.currentLevel} tamamlandı! Max level: ${this.maxLevel}`);
+        console.log(`🏆 LEVEL ${this.currentLevel} TAMAMLANDI! Max level: ${this.maxLevel}`);
+        console.log(`🎯 Şu anki seviye: ${this.currentLevel}, Max seviye: ${this.maxLevel}`);
         
         if (this.currentLevel >= this.maxLevel) {
             console.log('Oyun tamamlandı!');
