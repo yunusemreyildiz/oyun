@@ -52,7 +52,7 @@ class LevelManager {
             description: "Yunus arkadaşlarına soruyor: 'O kız kim?' Sonunda bir arkadaşı tanıyor ve adını öğreniyor...",
             theme: "school_corridor",
             playerStart: { x: 50, y: 400 },
-            goal: { x: 1870, y: 330 },
+            goal: { x: 1870, y: 340 },
             platforms: [
                 // Ana zemin - okul koridoru
                 { x: 0, y: 450, width: 300, height: 50, type: 'stone' },
